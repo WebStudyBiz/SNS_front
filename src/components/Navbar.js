@@ -8,8 +8,7 @@ const StyledNavbar = styled.div`
   display: flex;
   justify-content: space-between;
   position: fixed;
-  color: black;
-  background-color: green;
+  background-color: #fff;
   height: 60px;
   top: 0;
   width: 100%;
