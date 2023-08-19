@@ -14,9 +14,13 @@ const SidebarContainer = styled.div`
   top: 60px;
   height: 100%;
   width: 200px;
-  background-color: #333;
-  color: white;
+  background-color: white;
+  color: #333;
   padding: 20px;
+  transition: 0.2s;
+  @media (max-width: 768px) {
+    width: 40px;
+  }
 `;
 
 const SidebarMenuItem = styled.div`
@@ -24,24 +28,29 @@ const SidebarMenuItem = styled.div`
   align-items: center;
   height: 70px;
   margin-bottom: 15px;
+  padding: 0 20px;
   transition: color 0.3s;
   cursor: pointer;
+  border-radius: 20px;
 
   &:hover {
-    color: lightgray;
+    background-color: #f5f5f5;
   }
 `;
 
 const SidebarMenuIcon = styled.div`
-  margin-left: 4px;
   margin-right: 20px;
   font-size: 2rem;
 `;
 
 const SidebarMenuLink = styled.a`
-  color: white;
+  color: #333;
   text-decoration: none;
   font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Sidebar = () => {

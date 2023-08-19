@@ -12,6 +12,7 @@ const Container = styled.div`
   overflow: hidden;
   background-color: gray;
   float: ${(props) => props.float || "none"};
+  cursor: pointer;
 `;
 
 const Image = styled.img`
