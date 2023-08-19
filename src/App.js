@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import { styled } from "styled-components";
+import Sidebar from "./components/SideBar";
 
 const BodyContainer = styled.div`
   display: flex;
@@ -15,17 +16,16 @@ const BodyContainer = styled.div`
 const LeftContent = styled.div`
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 15%;
   height: 100%;
-  background-color: skyblue;
 `;
 
 const RightContent = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   height: 100%;
-  background-color: #f1f1f1;
+  background-color: skyblue;
 `;
 
 function App() {
@@ -33,7 +33,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <BodyContainer>
-        <LeftContent>hello</LeftContent>
+        <LeftContent>
+          <Sidebar />
+        </LeftContent>
         <RightContent>
           <Routes>
             <Route path="/" element={<Home />} />
