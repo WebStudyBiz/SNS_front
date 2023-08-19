@@ -2,22 +2,22 @@ import React from "react";
 import { styled } from "styled-components";
 import { FaSistrix } from "react-icons/fa6";
 
-const StyledSearchBar = styled.div`
+const Container = styled.div`
   background-color: #fff;
   display: flex;
   align-items: center;
-  margin: auto 0;
   padding: 2px 15px;
   border-radius: 20px;
   box-shadow: 0px 0px 8px #ddd;
-  height: 30px;
+  height: 40px;
   width: 100%;
 `;
 
-const StyledSearchInput = styled.input`
+const Input = styled.input`
   border: none;
   height: 100%;
   width: 100%;
+  font-size: 20px;
   margin-left: 10px;
   &:focus {
     outline: none;
@@ -26,11 +26,10 @@ const StyledSearchInput = styled.input`
 
 function SearchBar() {
   return (
-    <StyledSearchBar>
+    <Container>
       <FaSistrix />
-
-      <StyledSearchInput placeholder="Search Friend, Post or Video... " />
-    </StyledSearchBar>
+      <Input placeholder="Search Friend, Post or Video... " />
+    </Container>
   );
 }
 
