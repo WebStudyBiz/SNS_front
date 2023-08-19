@@ -8,6 +8,7 @@ import {
   FaPlusSquare,
   FaArchive,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -23,27 +24,13 @@ const SidebarContainer = styled.div`
   }
 `;
 
-const SidebarMenuItem = styled.div`
-  display: flex;
-  align-items: center;
-  height: 70px;
-  margin-bottom: 15px;
-  padding: 0 20px;
-  transition: color 0.3s;
-  cursor: pointer;
-  border-radius: 20px;
-
-  &:hover {
-    background-color: #f5f5f5;
-  }
-`;
-
 const SidebarMenuIcon = styled.div`
+  color: #333;
   margin-right: 20px;
   font-size: 2rem;
 `;
 
-const SidebarMenuLink = styled.a`
+const SidebarMenuText = styled.a`
   color: #333;
   text-decoration: none;
   font-size: 1.5rem;
@@ -53,44 +40,64 @@ const SidebarMenuLink = styled.a`
   }
 `;
 
+const SidebarMenuItem = styled(Link)`
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  transition: color 0.3s;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f5f5f5;
+
+    ${SidebarMenuIcon} {
+      font-size: 2.1rem;
+    }
+  }
+`;
+
 const Sidebar = () => {
   return (
     <SidebarContainer>
-      <SidebarMenuItem>
+      <SidebarMenuItem to="/">
         <SidebarMenuIcon>
           <FaHome />
         </SidebarMenuIcon>
-        <SidebarMenuLink>홈</SidebarMenuLink>
+        <SidebarMenuText>홈</SidebarMenuText>
       </SidebarMenuItem>
-      <SidebarMenuItem>
+      <SidebarMenuItem to="/upload">
         <SidebarMenuIcon>
           <FaPlusSquare />
         </SidebarMenuIcon>
-        <SidebarMenuLink>업로드</SidebarMenuLink>
+        <SidebarMenuText>업로드</SidebarMenuText>
       </SidebarMenuItem>
-      <SidebarMenuItem>
+      <SidebarMenuItem to="/message">
         <SidebarMenuIcon>
           <FaEnvelope />
         </SidebarMenuIcon>
-        <SidebarMenuLink>메세지</SidebarMenuLink>
+        <SidebarMenuText>메세지</SidebarMenuText>
       </SidebarMenuItem>
-      <SidebarMenuItem>
+      <SidebarMenuItem to="/store">
         <SidebarMenuIcon>
           <FaArchive />
         </SidebarMenuIcon>
-        <SidebarMenuLink>보관함</SidebarMenuLink>
+        <SidebarMenuText>보관함</SidebarMenuText>
       </SidebarMenuItem>
-      <SidebarMenuItem>
+      <SidebarMenuItem to="/follower">
         <SidebarMenuIcon>
           <FaUser />
         </SidebarMenuIcon>
-        <SidebarMenuLink>팔로워</SidebarMenuLink>
+        <SidebarMenuText>팔로워</SidebarMenuText>
       </SidebarMenuItem>
-      <SidebarMenuItem>
+      <SidebarMenuItem to="/settings">
         <SidebarMenuIcon>
           <FaCog />
         </SidebarMenuIcon>
-        <SidebarMenuLink>설정</SidebarMenuLink>
+        <SidebarMenuText>설정</SidebarMenuText>
       </SidebarMenuItem>
     </SidebarContainer>
   );
