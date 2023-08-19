@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { styled } from "styled-components";
 import Sidebar from "./components/SideBar";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 const BodyContainer = styled.div`
   display: flex;
@@ -41,6 +42,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </RightContent>
       </BodyContainer>

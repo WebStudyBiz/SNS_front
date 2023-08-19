@@ -29,8 +29,13 @@ const NavbarItemRight = styled.div`
 
 function Navbar() {
   const navigate = useNavigate();
+
   const handleClickLoginBtn = () => {
     navigate("/login");
+  };
+
+  const handleClickSignInBtn = () => {
+    navigate("/signup");
   };
 
   return (
@@ -44,6 +49,12 @@ function Navbar() {
       <NavbarItem>
         <NavbarItemRight>
           <CustomButton text="로그인" onClick={handleClickLoginBtn} />
+          <CustomButton
+            text="가입하기"
+            onClick={handleClickSignInBtn}
+            backgroundColor="#fff"
+            textColor="#007bff"
+          />
         </NavbarItemRight>
       </NavbarItem>
     </NavbarContainer>
