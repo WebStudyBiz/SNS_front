@@ -11,7 +11,6 @@ const Container = styled.div`
   border-radius: 50%;
   overflow: hidden;
   background-color: gray;
-  float: ${(props) => props.float || "none"};
   cursor: pointer;
 `;
 

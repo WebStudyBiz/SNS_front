@@ -3,6 +3,8 @@ import { styled } from "styled-components";
 import SearchBar from "./SearchBar";
 import Profile from "./Profile";
 import Logo from "./Logo";
+import CustomButton from "./CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -20,7 +22,17 @@ const NavbarItem = styled.div`
   flex: ${(props) => props.flex || 1};
 `;
 
+const NavbarItemRight = styled.div`
+  padding: 0px 10px;
+  float: right;
+`;
+
 function Navbar() {
+  const navigate = useNavigate();
+  const handleClickLoginBtn = () => {
+    navigate("/login");
+  };
+
   return (
     <NavbarContainer>
       <NavbarItem>
@@ -30,7 +42,9 @@ function Navbar() {
         <SearchBar />
       </NavbarItem>
       <NavbarItem>
-        <Profile float="right" />
+        <NavbarItemRight>
+          <CustomButton text="로그인" onClick={handleClickLoginBtn} />
+        </NavbarItemRight>
       </NavbarItem>
     </NavbarContainer>
   );

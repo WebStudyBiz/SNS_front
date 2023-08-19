@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import { styled } from "styled-components";
 import Sidebar from "./components/SideBar";
+import Login from "./pages/Login";
 
 const BodyContainer = styled.div`
   display: flex;
@@ -39,6 +40,7 @@ function App() {
         <RightContent>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </RightContent>
       </BodyContainer>
