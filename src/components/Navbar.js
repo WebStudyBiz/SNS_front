@@ -43,7 +43,7 @@ function Navbar() {
       <NavbarItem>
         <Logo />
       </NavbarItem>
-      <NavbarItem flex={2}>
+      <NavbarItem flex={1.5}>
         <SearchBar />
       </NavbarItem>
       <NavbarItem>
