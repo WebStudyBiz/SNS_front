@@ -53,7 +53,7 @@ const SignUpComponent = () => {
 
     axios
       .post(
-        "http://localhost:8080/register",
+        "http://localhost:8080/auth/register",
         {
           userId: userId,
           userPassword: userPassword,
